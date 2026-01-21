@@ -1,5 +1,5 @@
 <script>
-    import { env } from '$env/dynamic/public';
+    import { env } from '$env/dynamic/private';
 
     let userInput = "";
     let jsonResult = "";
