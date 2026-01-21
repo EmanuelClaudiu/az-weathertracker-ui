@@ -8,13 +8,10 @@
         const baseUrl = env.PUBLIC_AZ_WEATHERTRACKER_API_BASE_URL || "";
 
         try {
-            // 1. Perform the fetch
             const response = await fetch(`${baseUrl}/Weather/${userInput}`);
             
-            // 2. Parse the JSON
             const data = await response.json();
             
-            // 3. Convert JSON object to a pretty string for printing
             jsonResult = JSON.stringify(data, null, 2);
             
         } catch (error) {
