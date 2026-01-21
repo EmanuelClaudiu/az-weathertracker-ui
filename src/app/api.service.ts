@@ -8,7 +8,7 @@ export class ApiService {
   
   // Since we are in a browser, we can't hide this URL easily.
   // We usually point this to a relative path or a known global config.
-  private baseUrl = 'http://135.236.119.31:8080/Weather'; 
+  private baseUrl = 'https://weathertracker-api.victoriousstone-1cf870b3.westeurope.azurecontainerapps.io/Weather';
 
   async sendData(payload: string) {
     return await firstValueFrom(
