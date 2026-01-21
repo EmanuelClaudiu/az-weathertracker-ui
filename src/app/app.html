@@ -1,2 +1,11 @@
-<h1>Hello, {{ title() }}</h1>
-<p>Congratulations! Your app is running. 🎉</p>
+<div class="container">
+  <h1>Check Weather 🌤️</h1>
+  <input [(ngModel)]="userInput" placeholder="City" />
+  <button (click)="handlePress()" [disabled]="loading()">
+    {{ loading() ? 'Checking...' : 'Check' }}
+  </button>
+
+  @if (result()) {
+    <pre>{{ result() | json }}</pre>
+  }
+</div>
